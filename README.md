@@ -30,13 +30,14 @@ For all those Txy's, apply 1-D RANSAC algorithm on them which will return an est
 
 Here are sample estimated alpha results (compared with actual alpha used in blending). Note that the algorithm can recover image B even when it only lies an extremely shallow layer on A.
 
-* Actual alpha = 0.1, estimated alpha = 0.112902712055, inlierRatio = 0.554084356647
-* Actual alpha = 0.2, estimated alpha = 0.207447986441, inlierRatio = 0.615470742868
-* Actual alpha = 0.3, estimated alpha = 0.300773029393, inlierRatio = 0.610942857143
-* Actual alpha = 0.4, estimated alpha = 0.402590938953, inlierRatio = 0.60029606311
-* Actual alpha = 0.5, estimated alpha = 0.50318104225, inlierRatio = 0.597439489454
-* Actual alpha = 0.6, estimated alpha = 0.601678988569, inlierRatio = 0.59710681059
-* Actual alpha = 0.7, estimated alpha = 0.700427572526, inlierRatio = 0.618802192941
-* Actual alpha = 0.8, estimated alpha = 0.799603891742, inlierRatio = 0.661073144326
-* Actual alpha = 0.9, estimated alpha = 0.899509377766, inlierRatio = 0.754840733064
+* Actual alpha = 0.1, estimated alpha = 0.117798553914, inlierRatio = 0.35737527115
+* Actual alpha = 0.2, estimated alpha = 0.209966807838, inlierRatio = 0.480980012895
+* Actual alpha = 0.3, estimated alpha = 0.308397650996, inlierRatio = 0.527066649162
+* Actual alpha = 0.4, estimated alpha = 0.406832766168, inlierRatio = 0.548780178213
+* Actual alpha = 0.5, estimated alpha = 0.499385442547, inlierRatio = 0.562458120261
+* Actual alpha = 0.6, estimated alpha = 0.597386102773, inlierRatio = 0.536343332486
+* Actual alpha = 0.7, estimated alpha = 0.699549712642, inlierRatio = 0.529790000717
+* Actual alpha = 0.8, estimated alpha = 0.799380876813, inlierRatio = 0.550911923747
+* Actual alpha = 0.9, estimated alpha = 0.898431057173, inlierRatio = 0.614390749206
 
+Note that the above results are recovered from JPEG-saved blending image, which considered percision loss from float-integer conversion and JPEG-compression. If we blend in memory and test recovering, it would give better results.
