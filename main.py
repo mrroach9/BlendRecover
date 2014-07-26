@@ -48,7 +48,6 @@ def estimateAlpha(gradA, gradC):
     rad = RANSAC_RADIUS
     maxInlier = 0
     aEst = 0
-    print length, alphaList
     right = 0
     for left in range(length):
         while right < length and alphaList[right] - alphaList[left] < 2 * rad:
@@ -70,7 +69,9 @@ def loadImg(filename1, filename2):
     return img1, img2
 
 def blendImgForTest(imgA, imgB, alpha):
-    return imgA * alpha + imgB * (1 - alpha)
+    imgC = imgA * alpha + imgB * (1 - alpha)
+    cv2.imwrite('tmp_blend.jpg', imgC)
+    return cv2.imread('tmp_blend.jpg')
 
 if __name__ == '__main__':
     imgA, imgB = loadImg("img1.jpg", "img2.jpg")
