@@ -28,6 +28,8 @@ For all those Txy's, apply 1-D RANSAC algorithm on them which will return an est
 
 ###Results
 
+For result images and analysis in different scenarios, please refer to http://blog.roach-works.com/archives/352 .
+
 Here are sample estimated alpha results (compared with actual alpha used in blending). Note that the algorithm can recover image B even when it only lies an extremely shallow layer on A.
 
 * Actual alpha = 0.1, estimated alpha = 0.117798553914, inlierRatio = 0.35737527115
